@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,207 +9,151 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
+        }body {
+        font-family: 'Roboto', sans-serif;
+        background: #0a0a0a;
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+        position: relative;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #0a0a0a;
-            color: white;
-            text-align: center;
-            overflow-x: hidden;
-            position: relative;
-        }
+    #particles-js {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
 
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+    header {
+        background: linear-gradient(45deg, #ff0000, #ff6600);
+        padding: 15px;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+    }
 
-        header {
-            background: linear-gradient(45deg, #ff0000, #ff6600);
-            padding: 15px;
-            font-size: 22px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
-        }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
+    .cheat-box {
+        background: rgba(34, 34, 34, 0.9);
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
 
-        .cheat-box {
-            background: rgba(34, 34, 34, 0.9);
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
+    .cheat-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+    }
 
-        .cheat-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
-        }
+    .video-promo {
+        margin: 20px auto;
+        max-width: 600px;
+    }
 
-        .btn-order {
-            padding: 12px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            display: inline-block;
-            margin: 10px;
-        }
+    .kelly-img {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 150px;
+        z-index: 10;
+    }
 
-        .btn-wa {
-            background: #25D366;
-            color: white;
-        }
+    .btn-order {
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        display: inline-block;
+        margin: 10px;
+    }
 
-        .btn-wa:hover {
-            background: #1EBB5B;
-            transform: translateY(-3px);
-        }
+    .btn-wa {
+        background: #25D366;
+        color: white;
+    }
 
-        .btn-email {
-            background: #ff0000;
-            color: white;
-        }
+    .btn-wa:hover {
+        background: #1EBB5B;
+        transform: translateY(-3px);
+    }
 
-        .btn-email:hover {
-            background: #d00000;
-            transform: translateY(-3px);
-        }
+    .btn-email {
+        background: #ff0000;
+        color: white;
+    }
 
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
+    .btn-email:hover {
+        background: #d00000;
+        transform: translateY(-3px);
+    }
+</style>
 
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            background: #222;
-            color: white;
-        }
-
-        .footer {
-            margin-top: 20px;
-            padding: 10px;
-            background: #222;
-        }
-    </style>
 </head>
-<body>
+<body><div id="particles-js"></div>
+<header> FanzModder - Order Cheat Free Fire </header>
 
-    <div id="particles-js"></div>
+<div class="container">
+    <h2> Pilihan Cheat Free Fire </h2>
 
-    <header> FanzModder - Order Cheat Free Fire </header>
-
-    <div class="container">
-        <h2> Pilihan Cheat Free Fire </h2>
-
-        <div class="cheat-box">
-            <h3>Script Headshot</h3>
-            <p>Easy Drag Aim Lebih Padat Dan Akurasi Lebih Tinggi</p>
-        </div>
-
-        <div class="cheat-box">
-            <h3>Script Sensi</h3>
-            <p>Meningkatkan Sensitivitas Gameplay Anda Ke Tahap Maksimum</p>
-        </div>
-
-        <div class="cheat-box">
-            <h3>Hologram - COMING SOON</h3>
-            <p>Dapat Melihat Musuh Disebalik Tembok</p>
-        </div>
-
-        <h2>Order Sekarang</h2>
-        <form id="orderForm">
-            <div class="form-group">
-                <label>Nama:</label>
-                <input type="text" id="name" placeholder="Masukkan nama Anda" required>
-            </div>
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="email" id="email" placeholder="Masukkan email Anda" required>
-            </div>
-            <div class="form-group">
-                <label>Pilih Cheat:</label>
-                <select id="cheat">
-                    <option value="Script Headshot">Script Headshot</option>
-                    <option value="Script Sensi">Script Sensi</option>
-                    <option value="Hologram - COMING SOON">Hologram COMING SOON</option>
-                </select>
-            </div>
-            <button type="button" class="btn-order btn-wa" onclick="orderViaWhatsApp()">📲 Order via WhatsApp</button>
-            <button type="button" class="btn-order btn-email" onclick="orderViaEmail()">📧 Order via Email</button>
-        </form>
+    <div class="cheat-box">
+        <h3>Script Headshot</h3>
+        <p>Easy Drag Aim Lebih Padat Dan Akurasi Lebih Tinggi</p>
     </div>
 
-    <div class="footer">
-        © 2025 FanzModder | Semua Hak Dilindungi
+    <div class="cheat-box">
+        <h3>Script Sensi</h3>
+        <p>Meningkatkan Sensitivitas Gameplay Anda Ke Tahap Maksimum</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        function orderViaWhatsApp() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var cheat = document.getElementById("cheat").value;
+    <h2>Order Sekarang</h2>
+    <form id="orderForm">
+        <button type="button" class="btn-order btn-wa" onclick="orderViaWhatsApp()">📲 Order via WhatsApp</button>
+        <button type="button" class="btn-order btn-email" onclick="orderViaEmail()">📧 Order via Email</button>
+    </form>
+</div>
 
-            if (!name || !email) {
-                alert("Harap isi semua data!");
-                return;
-            }
+<div class="video-promo">
+    <h2>🎥 Promo Video 🎥</h2>
+    <iframe width="100%" height="315" src="https://youtu.be/fQ8DVFG50L0?si=cLZDExf8NLgY4bX0" frameborder="0" allowfullscreen></iframe>
+</div>
 
-            var whatsappNumber = "6285851633954";
-            var whatsappMessage = `Halo, saya ingin order cheat!\n\nNama: ${name}\nEmail: ${email}\nCheat: ${cheat}`;
-            var whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, "_blank");
-        }
+<div class="footer">
+    © 2025 FanzModder | Semua Hak Dilindungi
+</div>
 
-        function orderViaEmail() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var cheat = document.getElementById("cheat").value;
+<img src="kelly.png" class="kelly-img" alt="Kelly Free Fire">
 
-            if (!name || !email) {
-                alert("Harap isi semua data!");
-                return;
-            }
+<script>
+    function orderViaWhatsApp() {
+        var whatsappNumber = "6285851633954";
+        var whatsappMessage = "Halo, saya ingin order cheat!";
+        var whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(whatsappURL, "_blank");
+    }
 
-            var emailRecipient = "relxzorsetting@gmail.com";
-            var emailSubject = "Order Cheat Free Fire";
-            var emailBody = `Halo,\n\nSaya ingin order cheat:\n\nNama: ${name}\nEmail: ${email}\nCheat: ${cheat}`;
-            var mailtoURL = `mailto:${emailRecipient}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-            window.location.href = mailtoURL;
-        }
-
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 120 },
-                size: { value: 2, random: true },
-                move: { speed: 1.5, random: true, direction: "none" },
-                color: { value: ["#ff0000", "#ff6600", "#ffff00"] },
-                opacity: { value: 0.8, random: true },
-                line_linked: { enable: true, distance: 120, color: "#ffffff", opacity: 0.4 },
-            },
-        });
-    </script>
+    function orderViaEmail() {
+        var emailRecipient = "relxzorsetting@gmail.com";
+        var emailSubject = "Order Cheat Free Fire";
+        var emailBody = "Halo,\n\nSaya ingin order cheat.";
+        var mailtoURL = `mailto:${emailRecipient}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = mailtoURL;
+    }
+</script>
 
 </body>
 </html>
