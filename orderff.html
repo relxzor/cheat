@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Cheat Free Fire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #f7f7f7;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .product {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e91e63;
+        }
+        .order-btn {
+            display: block;
+            width: 100%;
+            background: #25D366;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .order-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Order Cheat Free Fire</h2>
+        <p>Pilih cheat yang anda inginkan dan order melalui WhatsApp.</p>
+
+        <div class="product">
+            <h3>Script Sensi</h3>
+            <p>Menyesuaikan sensitiviti untuk tembakan lebih lancar.</p>
+            <p class="price">5K</p>
+            <button class="order-btn" onclick="order('Script Sensi', 5)">Order Sekarang</button>
+        </div>
+
+        <div class="product">
+            <h3>Script Easy Drag Headshot</h3>
+            <p>Membantu anda mendapatkan headshot dengan lebih mudah.</p>
+            <p class="price">15K</p>
+            <button class="order-btn" onclick="order('Script Easy Drag Headshot', 15)">Order Sekarang</button>
+        </div>
+    </div>
+
+    <script>
+        function order(product, price) {
+            let phone = "+601156806761";
+            let message = `Saya ingin order ${product} dengan harga ${price}.`;
+            let whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappURL;
+        }
+    </script>
+
+</body>
+</html>

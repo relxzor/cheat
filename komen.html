@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komen & Rating</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #f7f7f7;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .rating {
+            margin: 10px 0;
+        }
+        .star {
+            font-size: 25px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .star:hover, .star.active {
+            color: gold;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .comment-box {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: left;
+        }
+        .comment-box .stars {
+            color: gold;
+        }
+        .comment-box .username {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>💬 Komen & Rating</h2>
+        <input type="text" id="username" placeholder="Masukkan nama anda">
+        <textarea id="comment" placeholder="Tulis komen anda di sini..."></textarea>
+        
+        <div class="rating">
+            <span class="star" data-rate="1">★</span>
+            <span class="star" data-rate="2">★</span>
+            <span class="star" data-rate="3">★</span>
+            <span class="star" data-rate="4">★</span>
+            <span class="star" data-rate="5">★</span>
+        </div>
+
+        <button class="submit-btn" onclick="submitComment()">Hantar Komen</button>
+
+        <div id="comments-section">
+            <h3>Komen Terkini:</h3>
+        </div>
+    </div>
+
+    <script>
+        let selectedRating = 0;
+        
+        document.querySelectorAll(".star").forEach(star => {
+            star.addEventListener("click", function() {
+                selectedRating = this.getAttribute("data-rate");
+                document.querySelectorAll(".star").forEach(s => s.classList.remove("active"));
+                for (let i = 0; i < selectedRating; i++) {
+                    document.querySelectorAll(".star")[i].classList.add("active");
+                }
+            });
+        });
+
+        function submitComment() {
+            let username = document.getElementById("username").value.trim();
+            let commentText = document.getElementById("comment").value.trim();
+            
+            if (username === "" || commentText === "" || selectedRating === 0) {
+                alert("Sila isi nama, komen dan pilih rating!");
+                return;
+            }
+
+            let commentsSection = document.getElementById("comments-section");
+            let commentBox = document.createElement("div");
+            commentBox.classList.add("comment-box");
+            
+            let stars = "★".repeat(selectedRating) + "☆".repeat(5 - selectedRating);
+            commentBox.innerHTML = `<p class="username">${username}:</p><p>${commentText}</p><p class="stars">${stars}</p>`;
+            
+            commentsSection.appendChild(commentBox);
+
+            document.getElementById("username").value = "";
+            document.getElementById("comment").value = "";
+            document.querySelectorAll(".star").forEach(s => s.classList.remove("active"));
+            selectedRating = 0;
+        }
+    </script>
+
+</body>
+</html>
